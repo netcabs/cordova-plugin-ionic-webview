@@ -216,7 +216,7 @@
         bind = @"localhost";
     }
     NSString *scheme = [settings cordovaSettingForKey:@"iosScheme"];
-    if(scheme == nil || [scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"]  || [scheme isEqualToString:@"file"]){
+    if(scheme == nil){
         scheme = @"ionic";
     }
     self.CDV_LOCAL_SERVER = [NSString stringWithFormat:@"%@://%@", scheme, bind];
